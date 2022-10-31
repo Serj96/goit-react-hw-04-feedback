@@ -8,12 +8,7 @@ const Feedback = ({options, Increment}) => {
     <ul className={css.list}>
         {options.map((option) => {
         return (
-        <li 
-        className={css.item} 
-        key={option}><button 
-        type="button" 
-        className={css.button} 
-        onClick={() => Increment(option)}
+        <li className={css.item} key={option}><button type="button" className={css.button} onClick={() => Increment(option)}
         >{option}</button></li> 
         ) 
         })}

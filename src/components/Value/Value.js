@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from  './Value.module.css';
 
 
-const Value = ({good, neutral, bad, total = 0, countPositiveFeedback = 0}) => {
+const Value = ({good, neutral, bad, total, countPositiveFeedback}) => {
 return (
    <>
    <h2 className={css.title}>Statistics</h2>

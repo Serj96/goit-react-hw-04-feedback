@@ -32,21 +32,12 @@ render(){
   const options = Object.keys(this.state);
   return (<>
     <Section title="Please leave feedback">
-      <Feedback 
-      options={options} 
-      Increment={this.Increment}/>
-      {total > 0 ? ( <Value 
-      good={good} 
-      neutral={neutral} 
-      bad={bad} 
-      total={total} 
-      countPositiveFeedback={countPositiveFeedback}/> ) 
+      <Feedback options={options} Increment={this.Increment}/>
+      {total > 0 ? ( <Value good={good} neutral={neutral} bad={bad} total={total} countPositiveFeedback={countPositiveFeedback}/> ) 
       :
-      ( <Message  
-      message="There is no feedback" 
-      /> )}
+      ( <Message message="There is no feedback"/> )}
     </Section>
-    </>)
+    </>)   
 };
 }
 
