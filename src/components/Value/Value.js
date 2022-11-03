@@ -4,7 +4,6 @@ import css from './Value.module.css';
 const Value = ({ good, neutral, bad, total, countPositiveFeedback }) => {
   return (
     <>
-      <h2 className={css.title}>Statistics</h2>
       <p className={css.p}>Neutral: {neutral}</p>
       <p className={css.p}>Bad: {bad}</p>
       <p className={css.p}>Good: {good}</p>

@@ -29,7 +29,6 @@ class App extends Component {
     const countPositiveFeedback = this.countPositiveFeedbackPercentage();
     const options = Object.keys(this.state);
     return (
-      <>
         <Section title="Please leave feedback">
           <Feedback options={options} Increment={this.Increment} />
           {total > 0 ? (
@@ -44,7 +43,6 @@ class App extends Component {
                 <Message message="There is no feedback" />
           )}
         </Section>
-      </>
     );
   }
 }
