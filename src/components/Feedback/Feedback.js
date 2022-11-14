@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 
-const Feedback = ({ options, Increment }) => {
+export default function Feedback({ options, increment }) {
   return (
     <>
       <ul className={css.list}>
-        {options.map(option => {
+        {options.map(buttonTitle => {
           return (
-            <li className={css.item} key={option}>
+            <li className={css.item} key={buttonTitle}>
               <button
-                type="button"
+                title={buttonTitle}
                 className={css.button}
-                onClick={() => Increment(option)}
+                onClick={increment}
               >
-                {option}
+                {buttonTitle}
               </button>
             </li>
           );
@@ -25,7 +25,6 @@ const Feedback = ({ options, Increment }) => {
 
 Feedback.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  Increment: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
 };
 
-export default Feedback;
